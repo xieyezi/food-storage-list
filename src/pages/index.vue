@@ -10,40 +10,19 @@ const go = () => {
 
 <template>
   <div>
-    <div i-carbon-campsite text-4xl inline-block />
+    <div i-fa6-solid-bowl-food text-4xl inline-block />
     <p>
-      <a rel="noreferrer" href="https://github.com/antfu/vitesse-lite" target="_blank">
-        Vitesse Lite
-      </a>
+      非常时期囤货清单
     </p>
-    <p>
-      <em text-sm op75>Opinionated Vite Starter Template</em>
+    <p text-sm op75 mt-10>
+      疫情总是在不经意之间来袭，在家中常备一些必备的食品，就显得很有必要，本手册目的是给出一个可供选择的居家封闭情况下的食品清单。
     </p>
 
-    <div py-4 />
-
-    <input
-      id="input"
-      v-model="name"
-      placeholder="What's your name?"
-      type="text"
-      autocomplete="false"
-      p="x-4 y-2"
-      w="250px"
-      text="center"
-      bg="transparent"
-      border="~ rounded gray-200 dark:gray-700"
-      outline="none active:none"
-      @keydown.enter="go"
-    >
+    <div mt-20 />
 
     <div>
-      <button
-        class="m-3 text-sm btn"
-        :disabled="!name"
-        @click="go"
-      >
-        Go
+      <button class="m-3 text-base btn" :disabled="!name" @click="go">
+        查看清单
       </button>
     </div>
   </div>
