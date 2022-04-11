@@ -1,15 +1,11 @@
 <script setup lang="ts">
-const name = $ref('')
 
 const router = useRouter()
-const go = () => {
-  if (name)
-    router.push(`/hi/${encodeURIComponent(name)}`)
-}
+const go = () => router.push('/list')
 </script>
 
 <template>
-  <div>
+  <div font-sans p="x-4 y-30" text="center">
     <div i-fa6-solid-bowl-food text-4xl inline-block />
     <p>
       非常时期囤货清单
@@ -21,7 +17,7 @@ const go = () => {
     <div mt-20 />
 
     <div>
-      <button class="m-3 text-base btn" :disabled="!name" @click="go">
+      <button class="m-3 text-base btn" @click="go">
         查看清单
       </button>
     </div>
