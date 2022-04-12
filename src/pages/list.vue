@@ -1,41 +1,93 @@
 <script setup lang="ts">
-import { foods, payTations, waters } from '../data'
+import { bottles, foods, payTations, vegtablesLittleLong, vegtablesLong, vegtablesMiddle, vegtablesShort, waters } from '../data'
 
 </script>
 
 <template>
-  <div mt-15>
+  <div mt-18>
+    <!-- 干粮 & 干货 -->
     <Card>
       <div inline-flex gap-1>
-        <p text-lg font-bold>
-          食品类
+        <p i-icon-park-outline-noodles />
+        <p text-base font-bold>
+          干粮 & 干货
         </p>
       </div>
-      <!-- 干粮 & 干货 -->
-      <div>
-        <div mt-4 inline-flex gap-1>
-          <p i-icon-park-outline-noodles />
-          <p text-base font-bold>
-            干粮 & 干货
-          </p>
-        </div>
-        <div v-for="food in foods" :key="food.name" h-10 mr-2 ml-2 flex justify-between items-center>
-          <p>{{ food.name }}</p>
-          <p>{{ food.count }}</p>
-        </div>
+      <div v-for="food in foods" :key="food.name" h-10 mr-2 ml-2 flex justify-between items-center>
+        <p>{{ food.name }}</p>
+        <p>{{ food.count }}</p>
       </div>
-      <!-- 饮用水 -->
-      <div>
-        <div mt-2 inline-flex gap-1>
-          <p i-icon-park-outline-water-level />
-          <p text-base font-bold>
-            饮用水
-          </p>
-        </div>
-        <div v-for="water in waters" :key="water.name" h-10 mr-2 ml-2 flex justify-between items-center>
-          <p>{{ water.name }}</p>
-          <p>{{ water.count }}</p>
-        </div>
+    </Card>
+    <!-- 蔬菜类 -->
+    <Card>
+      <div inline-flex gap-1>
+        <p i-carbon-tree />
+        <p text-base font-bold>
+          蔬菜类
+        </p>
+      </div>
+      <div mt-1>
+        <p text-base italic>
+          储存时间较短（3-4天）
+        </p>
+      </div>
+      <div v-for="vegtable in vegtablesShort" :key="vegtable.name" h-10 mr-2 ml-2 flex justify-between items-center>
+        <p>{{ vegtable.name }}</p>
+        <p>{{ vegtable.count }}</p>
+      </div>
+      <div mt-1>
+        <p text-base italic>
+          储存时间中等（5-7天）
+        </p>
+      </div>
+      <div v-for="vegtable in vegtablesMiddle" :key="vegtable.name" h-10 mr-2 ml-2 flex justify-between items-center>
+        <p>{{ vegtable.name }}</p>
+        <p>{{ vegtable.count }}</p>
+      </div>
+      <div mt-1>
+        <p text-base italic>
+          存储时间较长（8-14天）
+        </p>
+      </div>
+      <div v-for="vegtable in vegtablesLittleLong" :key="vegtable.name" h-10 mr-2 ml-2 flex justify-between
+        items-center>
+        <p>{{ vegtable.name }}</p>
+        <p>{{ vegtable.count }}</p>
+      </div>
+      <div mt-1>
+        <p text-base italic>
+          脱水蔬菜长期储存
+        </p>
+      </div>
+      <div v-for="vegtable in vegtablesLong" :key="vegtable.name" h-10 mr-2 ml-2 flex justify-between items-center>
+        <p>{{ vegtable.name }}</p>
+        <p>{{ vegtable.count }}</p>
+      </div>
+    </Card>
+    <!-- 调味料 -->
+    <Card>
+      <div inline-flex gap-1>
+        <p i-icon-park-outline-bottle-two />
+        <p text-base font-bold>
+          调味料
+        </p>
+      </div>
+      <div v-for="bottle in bottles" :key="bottle.name" h-10 mr-2 ml-2 flex justify-between items-center>
+        <p>{{ bottle.name }}</p>
+        <p>{{ bottle.count }}</p>
+      </div>
+    </Card>
+    <!-- 饮用水 -->
+    <Card>
+      <div inline-flex gap-1>
+        <p i-icon-park-outline-water-level />
+        <p text-base font-bold>
+          饮用水
+        </p>
+      </div>
+      <div v-for="water in waters" :key="water.name" h-10 mr-2 ml-2 flex justify-between items-center>
+        <p>{{ water.name }}</p>
+        <p>{{ water.count }}</p>
       </div>
     </Card>
     <!-- 注意事项 -->

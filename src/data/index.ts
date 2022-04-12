@@ -1,11 +1,11 @@
 const foods = [
   {
     name: '大米',
-    count: '5kg x 10',
+    count: '10 x 5kg',
   },
   {
-    name: '各色杂粮',
-    count: '0.5kg x 1',
+    name: '杂粮(红豆、小米、玉米等)',
+    count: '各1kg',
   },
   {
     name: '压缩饼干',
@@ -13,15 +13,15 @@ const foods = [
   },
   {
     name: '苏打饼干',
-    count: '1kg x 3',
+    count: '3 x 1kg',
   },
   {
     name: '挂面/快速面饼',
-    count: '5kg x 10',
+    count: '1 x 10kg ',
   },
   {
-    name: '面条',
-    count: '20kg',
+    name: '面条(荞麦面、魔芋面)',
+    count: '20包',
   },
   {
     name: '各种麦片',
@@ -30,14 +30,6 @@ const foods = [
   {
     name: '粉丝/粉条/干米线',
     count: '2.5kg',
-  },
-  {
-    name: '脱水水果/干果',
-    count: '5kg x 10',
-  },
-  {
-    name: '罐头（肉类、果蔬、豆类）',
-    count: '20份',
   },
   {
     name: '面粉',
@@ -53,9 +45,149 @@ const foods = [
   },
 ]
 
+const vegtablesShort = [
+  {
+    name: '小白菜',
+    count: '10 x 5kg',
+  },
+  {
+    name: '奶白菜',
+    count: '各1kg',
+  },
+  {
+    name: '乌塌菜',
+    count: '10包',
+  },
+  {
+    name: '油菜',
+    count: '3 x 1kg',
+  },
+  {
+    name: '油菜心',
+    count: '1 x 10kg ',
+  },
+  {
+    name: '油麦菜',
+    count: '10包',
+  },
+  {
+    name: '空心菜',
+    count: '3 x 1kg',
+  },
+  {
+    name: '芹菜',
+    count: '1 x 10kg ',
+  },
+]
+
+const vegtablesMiddle = [
+  {
+    name: '茄子',
+    count: '10 x 5kg',
+  },
+  {
+    name: '番茄',
+    count: '各1kg',
+  },
+  {
+    name: '辣椒',
+    count: '10包',
+  },
+  {
+    name: '莴笋',
+    count: '3 x 1kg',
+  },
+  {
+    name: '西兰花',
+    count: '1 x 10kg ',
+  },
+  {
+    name: '紫甘蓝',
+    count: '10包',
+  },
+  {
+    name: '莲藕',
+    count: '3 x 1kg',
+  },
+  {
+    name: '秋葵',
+    count: '1 x 10kg ',
+  },
+]
+
+const vegtablesLittleLong = [
+  {
+    name: '萝卜/胡萝卜',
+    count: '10 x 5kg',
+  },
+  {
+    name: '冬笋',
+    count: '各1kg',
+  },
+  {
+    name: '大白菜',
+    count: '10包',
+  },
+  {
+    name: '南瓜',
+    count: '3 x 1kg',
+  },
+  {
+    name: '土豆',
+    count: '1 x 10kg ',
+  },
+  {
+    name: '红薯',
+    count: '10包',
+  },
+  {
+    name: '芋头',
+    count: '3 x 1kg',
+  },
+  {
+    name: '洋葱',
+    count: '1 x 10kg ',
+  },
+]
+
+const vegtablesLong = [
+  {
+    name: '脱水萝卜干',
+    count: '10 x 5kg',
+  },
+  {
+    name: '紫菜',
+    count: '各1kg',
+  },
+  {
+    name: '黄花菜',
+    count: '10包',
+  },
+  {
+    name: '干香菇',
+    count: '3 x 1kg',
+  },
+  {
+    name: '干豆角',
+    count: '1 x 10kg ',
+  },
+  {
+    name: '盐渍海带',
+    count: '10包',
+  },
+  {
+    name: '笋干',
+    count: '3 x 1kg',
+  },
+  {
+    name: '腐竹',
+    count: '1 x 10kg ',
+  },
+]
+
 const waters = [
   {
-    name: '空瓶裝滿自來水',
+    name: '空瓶装满自來水',
     count: '5L * 8',
   },
   {
@@ -68,12 +200,125 @@ const waters = [
   },
   {
     name: '滤水壶',
-    count: '1',
+    count: '1个',
   },
   {
     name: '可折叠容水器',
-    count: '1',
+    count: '1个',
   },
+]
+
+const bottles = [
+  {
+    name: '盐（重要）',
+    count: '3包',
+  },
+  {
+    name: '植物油',
+    count: '5L',
+  },
+  {
+    name: '椰子油',
+    count: '250g',
+  },
+  {
+    name: '黄油',
+    count: '0.5kg',
+  },
+  {
+    name: '菜籽油',
+    count: '1桶',
+  },
+  {
+    name: '料酒',
+    count: '1瓶',
+  },
+  {
+    name: '生抽',
+    count: '1瓶',
+  },
+  {
+    name: '蚝油',
+    count: '1瓶',
+  },
+  {
+    name: '醋',
+    count: '1瓶',
+  },
+  {
+    name: '白糖',
+    count: '1袋',
+  },
+  {
+    name: '冰糖',
+    count: '1袋',
+  },
+  {
+    name: '香油',
+    count: '1瓶',
+  },
+  {
+    name: '榨菜',
+    count: '5包',
+  },
+  {
+    name: '老干妈',
+    count: '1罐',
+  },
+  {
+    name: '豆瓣酱',
+    count: '1罐',
+  },
+  {
+    name: '番茄酱',
+    count: '1罐',
+  },
+  // ///
+  {
+    name: '黄豆酱',
+    count: '1罐',
+  },
+  {
+    name: '蒜蓉酱',
+    count: '1罐',
+  },
+  {
+    name: '五香粉',
+    count: '1罐',
+  },
+  {
+    name: '十三香',
+    count: '1包',
+  },
+  {
+    name: '辣椒面',
+    count: '1罐',
+  },
+  {
+    name: '黑白胡椒',
+    count: '1罐',
+  },
+  {
+    name: '八角',
+    count: '适量',
+  },
+  {
+    name: '花椒',
+    count: '适量',
+  },
+  {
+    name: '小块的火锅底料',
+    count: '1包',
+  },
+  {
+    name: '蒜',
+    count: '适量',
+  },
+  {
+    name: '姜',
+    count: '适量',
+  },
+
 ]
 
 const payTations = [
@@ -87,5 +332,10 @@ const payTations = [
 export {
   foods,
   waters,
+  bottles,
+  vegtablesShort,
+  vegtablesMiddle,
+  vegtablesLong,
+  vegtablesLittleLong,
   payTations,
 }
