@@ -1,52 +1,5 @@
 <script setup lang="ts">
-import { ref } from 'vue'
-
-const list = ref([
-  {
-    name: '大米',
-    count: '5kg x 10',
-  },
-  {
-    name: '各色杂粮',
-    count: '0.5kg x 1',
-  },
-  {
-    name: '压缩饼干',
-    count: '10包',
-  },
-  {
-    name: '苏打饼干',
-    count: '1kg x 3',
-  },
-  {
-    name: '挂面/快速面饼',
-    count: '5kg x 10',
-  },
-  {
-    name: '面条',
-    count: '20kg',
-  },
-  {
-    name: '各种麦片',
-    count: '2.5kg',
-  },
-  {
-    name: '粉丝、粉条、干米线',
-    count: '2.5kg',
-  },
-  {
-    name: '脱水水果、干果',
-    count: '5kg x 10',
-  },
-  {
-    name: '罐头（肉类、果蔬、豆类）',
-    count: '20份',
-  },
-  {
-    name: '面粉',
-    count: '25kg',
-  },
-])
+import { foods, payTations, waters } from '../data'
 
 </script>
 
@@ -54,14 +7,57 @@ const list = ref([
   <div mt-15>
     <Card>
       <div inline-flex gap-1>
-        <p i-twemoji-canned-food text-lg />
-        <p text-lg font-medium>
+        <p text-lg font-bold>
           食品类
         </p>
       </div>
-      <div v-for="item in list" :key="item.name" h-10 flex justify-between items-center>
-        <p>{{ item.name }}</p>
-        <p>{{ item.count }}</p>
+      <!-- 干粮 & 干货 -->
+      <div>
+        <div mt-4 inline-flex gap-1>
+          <p i-icon-park-outline-noodles />
+          <p text-base font-bold>
+            干粮 & 干货
+          </p>
+        </div>
+        <div v-for="food in foods" :key="food.name" h-10 mr-2 ml-2 flex justify-between items-center>
+          <p>{{ food.name }}</p>
+          <p>{{ food.count }}</p>
+        </div>
+      </div>
+      <!-- 饮用水 -->
+      <div>
+        <div mt-2 inline-flex gap-1>
+          <p i-icon-park-outline-water-level />
+          <p text-base font-bold>
+            饮用水
+          </p>
+        </div>
+        <div v-for="water in waters" :key="water.name" h-10 mr-2 ml-2 flex justify-between items-center>
+          <p>{{ water.name }}</p>
+          <p>{{ water.count }}</p>
+        </div>
+      </div>
+    </Card>
+    <!-- 注意事项 -->
+    <Card>
+      <div inline-flex gap-1>
+        <p i-icon-park-outline-thinking-problem text-lg />
+        <p text-lg font-medium>
+          食物注意事项
+        </p>
+      </div>
+      <div px-2 mt-2>
+        <p text-sm italic leading-relaxed>
+          记录采购日期和过期时间，依照先进先出和安全库存原则，优先消耗保质期短采购时间较长的食品，及时替换库存，阴凉避光通风干燥是储存基本条件。
+        </p>
+      </div>
+      <div mt-3>
+        <p text-base font-bold>
+          数据来源
+        </p>
+      </div>
+      <div v-for="(tation, index) in payTations" :key="tation" h-auto mr-2 ml-2 py-2 flex justify-start items-center>
+        <p>{{ index + 1 }}- {{ tation }}</p>
       </div>
     </Card>
   </div>

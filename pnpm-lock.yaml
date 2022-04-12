@@ -4,6 +4,7 @@ specifiers:
   '@antfu/eslint-config': ^0.20.2
   '@iconify-json/carbon': ^1.1.3
   '@iconify-json/fa6-solid': ^1.1.3
+  '@iconify-json/icon-park-outline': ^1.1.1
   '@iconify-json/twemoji': ^1.1.3
   '@types/node': ^17.0.23
   '@unocss/reset': ^0.31.0
@@ -33,6 +34,7 @@ devDependencies:
   '@antfu/eslint-config': 0.20.2_eslint@8.13.0+typescript@4.6.3
   '@iconify-json/carbon': 1.1.3
   '@iconify-json/fa6-solid': 1.1.3
+  '@iconify-json/icon-park-outline': 1.1.1
   '@iconify-json/twemoji': 1.1.3
   '@types/node': 17.0.23
   '@unocss/reset': 0.31.0
@@ -219,6 +221,12 @@ packages:
 
   /@iconify-json/fa6-solid/1.1.3:
     resolution: {integrity: sha512-ZRYc+Rqor5Zjs8w+fsxiEQ7SDNIhQho3SF8Q1P4kEWZP0qo53DTp38iIg2qTjQy8UNZx2EsGjFqrTeHXNpx3cw==}
+    dependencies:
+      '@iconify/types': 1.1.0
+    dev: true
+
+  /@iconify-json/icon-park-outline/1.1.1:
+    resolution: {integrity: sha512-EUx2PWLmWQ61qeeed7ewXy/rcNmNze8aNjigNCfUhKwQ3LJWiof1MZFBwxftQPQ1YAyaJqFKFo7aGsn7Rp5QtA==}
     dependencies:
       '@iconify/types': 1.1.0
     dev: true
