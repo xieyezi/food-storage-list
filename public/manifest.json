@@ -2,7 +2,7 @@
   "name": "囤货清单",
   "short_name": "囤货清单",
   "start_url": ".",
-  "display": "fullscreen",
+  "display": "standalone",
   "description": "非常时期囤货清单.",
   "icons": [
     {
