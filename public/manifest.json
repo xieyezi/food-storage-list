@@ -4,6 +4,7 @@
   "start_url": ".",
   "display": "standalone",
   "description": "非常时期囤货清单.",
+  "background_color": "#fae1ce",
   "icons": [
     {
       "src": "/192.png",
